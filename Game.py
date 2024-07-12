@@ -21,11 +21,11 @@ while LIFE != 0:
     elif (AI == 'p' and choice == 'r') or (AI == 'r' and choice == 's') or (AI == 's' and choice == 'p'):
         print(f"AI chose: {AI}")
         LIFE -= 1
-        print(f"You LOSE! \nYour Score is = '{SCORE}' \nLIFE = '{LIFE}'")
+        print(f"You LOSE! \nYour Score is = '{SCORE}' \nLIFE = {LIFE}")
     else:
         print(f"AI chose: {AI}")
         SCORE += 1
-        print(f"You WON! \nYour Score is = '{SCORE}' \nLIFE = '{LIFE}'")
+        print(f"You WON! \nYour Score is = {SCORE} \nLIFE = {LIFE}")
 
 print("Game Over")
 print(f"Final Score: {SCORE}")
