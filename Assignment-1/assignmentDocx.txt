@@ -1,0 +1,18 @@
+problem-1:Greeting Messages Generator
+
+1)Creating a Function "Validation()" for validating the name <=10 .
+2)return the validated Strings in First name and last name for each .
+3)then the "f" string function used for return the text to get the output .
+
+
+problem-2:Runner Up tracker
+
+1)creating a function find_runner_up() .
+2)inside this first take the input the player list .
+3)insert the strings followed by spaces so i used split() to get the individual scores.
+4)after splitting i used map() for it converts the input strings to integers .the i used List() for creating the List items.
+5) after that It checks if the number of entered scores matches the number of participants. If not, it prints an error message.
+6)The set() data structure in Python is used to store unique elements. It automatically removes any duplicate elements .
+7)It creates a set of scores to ensure uniqueness and checks if there are at least two unique scores.
+8)It sorts the unique scores in descending order and identifies the second highest score as the runner-up.
+9)finally it prints teh runners-up .
