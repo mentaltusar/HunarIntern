@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happiness Calculator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="form-container">
+        <h2>Happiness Calculator</h2>
+        <form method="post">
+            <label for="n">Enter n:</label>
+            <input type="text" id="n" name="n" placeholder="Enter 'n' number " required>
+
+            <label for="m">Enter m:</label>
+            <input type="text" id="m" name="m" placeholder="Enter 'm' number" required>
+
+            <label for="array">Enter the array elements:</label>
+            <input type="text" id="array" name="array" placeholder="Use space for Each Element.." required>
+
+            <label for="A">Enter set A elements:</label>
+            <input type="text" id="A" name="A" placeholder="Use space for Each Element.." required>
+
+            <label for="B">Enter set B elements:</label>
+            <input type="text" id="B" name="B" placeholder="Use space for Each Element.." required>
+
+            <input type="submit" value="Calculate Happiness">
+        </form>
+    </div>
+<div style="text-align:center;">
+    {% if happiness is not none %}
+            <h2>Your Total Happiness: {{ happiness }}</h2>
+            {% if happiness > 0 %}
+                <img src="{{ url_for('static', filename='happy.png') }}" alt="Happy">
+            {% elif happiness < 0 %}
+                <img src="{{ url_for('static', filename='sad.png') }}" alt="Sad">
+            {% else %}
+                <img src="{{ url_for('static', filename='neutral.png') }}" alt="Neutral">
+            {% endif %}
+        {% endif %}
+</div>
+</body>
+</html>
